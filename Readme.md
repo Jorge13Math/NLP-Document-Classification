@@ -1,5 +1,5 @@
 # Introduction
-This repository aims to show the result and the methodology used to achieve the objectives of the Seedtag technical test. The task is based on natural language processing, using Python programming language for their development.
+This repository aims to show the result and the methodology used to achieve the objectives of the technical test. The task is based on natural language processing, using Python programming language for their development.
 
 # Getting Started
 
