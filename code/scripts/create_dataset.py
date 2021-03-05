@@ -9,16 +9,16 @@ logging.basicConfig(level=logging.INFO,
 
 logger = logging.getLogger(__name__)
 
+
 def genererate_dataframe(path):
     """
     Generate dataframe from folder data
-    
+
     Args:
         :path: Folder's Path
 
     Returns:
         :df: Dataframe with text label and language
-    
     """
     logger.info('Loading files')
     labels = os.listdir(path)
@@ -27,16 +27,16 @@ def genererate_dataframe(path):
     for label in labels:
         if os.path.isdir(path+label):
             for doc in os.listdir(path+label):
-                f = open(path+label+'/'+doc,'r',encoding='ISO-8859-1')
+                f = open(path+label+'/'+doc, 'r', encoding='ISO-8859-1')
                 text = f.read()
-                values['Text']=text
+                values['Text'] = text
                 f.close()
-                values['label']= label
+                values['label'] = label
                 values['documentName'] = doc
                 data.append(values)
-                values ={}
-    
+                values = {}
+
     df = pd.DataFrame(data)
     logger.info('Dataframe generated')
-   
+
     return df
